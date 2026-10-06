@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #070b1a;
+    color: white;
+}
+
+/* NAVBAR */
+
+header {
+    background: #090d24;
+    border-bottom: 1px solid #222a50;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #ffd000;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ffd000;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+
+    background: #ffd000;
+    color: #080b18;
+
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 65px;
+    line-height: 1;
+    margin: 25px 0;
+}
+
+.hero p {
+    color: #b8bfdc;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* BOTÃO */
+
+button {
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ffd000;
+    color: #080b18;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ffd000;
+}
+
+
+/* ENERGIA */
+
+.energy {
+    margin-top: 35px;
+    max-width: 400px;
+}
+
+.energy-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.energy-bar {
+    height: 12px;
+    background: #202641;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#energyLevel {
+    width: 75%;
+    height: 100%;
+    background: #ffd000;
+
+    transition: 0.5s;
+}
+
+
+/* HERÓI */
+
+.hero-image {
+    width: 400px;
+    height: 400px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #111a3d;
+
+    box-shadow:
+        0 0 40px #17245d,
+        inset 0 0 40px #25377c;
+}
+
+.hero-icon {
+    position: relative;
+
+    font-size: 180px;
+
+    filter: drop-shadow(0 0 20px #ffd000);
+
+    animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* PODERES */
+
+.powers {
+    padding: 80px 30px;
+    background: #0b1028;
+    text-align: center;
+}
+
+.powers h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    padding: 30px;
+
+    background: #111735;
+
+    border: 1px solid #252e55;
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #ffd000;
+}
+
+.card span {
+    font-size: 45px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    color: #aeb6d2;
+    line-height: 1.5;
+}
+
+
+/* MISSÃO */
+
+.mission {
+    max-width: 800px;
+    margin: auto;
+
+    padding: 100px 30px;
+
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    color: #b8bfdc;
+    line-height: 1.7;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #050816;
+    color: #777f9d;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-icon {
+        font-size: 130px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .energy {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
